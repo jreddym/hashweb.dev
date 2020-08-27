@@ -42,7 +42,7 @@ const StyledMenu = styled.button`
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
-  @media (min-width: 800px) {
+  @media (min-width: 850px) {
     display: none;
   }
 `;

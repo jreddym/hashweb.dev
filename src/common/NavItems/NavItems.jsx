@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const StyledNav = styled.nav`
+const activeClass = 'active';
+
+const StyledNav = styled.nav.attrs({ activeClass })`
   ul {
     display: inline-flex;
     list-style: none;
@@ -14,14 +17,20 @@ const StyledNav = styled.nav`
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-in;
-
-    &:hover,
-    &:active {
-      color: #fff;
-    }
   }
 
-  @media (max-width: 800px) {
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover,
+  a.${activeClass} {
+    color: #fff;
+  }
+
+  @media (max-width: 850px) {
     ul {
       display: none;
     }
@@ -32,10 +41,20 @@ const NavItems = props => {
   return (
     <StyledNav open={props.open}>
       <ul>
-        <li>HOME</li>
-        <li>ABOUT ME</li>
-        <li>PORTFOLIO</li>
-        <li>CONTACT</li>
+        <li>
+          <NavLink to='/' exact activeClassName='active'>
+            HOME
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/about'>ABOUT</NavLink>
+        </li>
+        <li>
+          <NavLink to='/portfolio'>PORTFOLIO</NavLink>
+        </li>
+        <li>
+          <NavLink to='/contact'>CONTACT</NavLink>
+        </li>
       </ul>
     </StyledNav>
   );

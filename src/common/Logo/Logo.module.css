@@ -1,8 +1,14 @@
 .logo {
-  width: 200px;
+  width: 250px;
   cursor: pointer;
 }
 
 .logo img {
   width: 100%;
+}
+
+@media (max-width: 850px) {
+  .logo {
+    width: 200px;
+  }
 }

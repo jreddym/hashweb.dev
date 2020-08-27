@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import MainContainer from './pages/MainPage/MainContainer';
 import NavigationBar from './common/NavigationBar/NavigationBar';
 import SideNavBar from './common/SideNavBar/SideNavBar';
+import AboutMe from './pages/AboutMePage/AboutMeComponent';
+import Portfolio from './pages/PortfolioPage/PortfolioComponent';
+import { Route, Switch } from 'react-router-dom';
 
 const StyledMain = styled.div`
   width: 100%;
@@ -16,7 +19,11 @@ function App() {
     <StyledMain>
       <NavigationBar open={openSideNav} setOpen={setOpenSideNav} />
       <SideNavBar open={openSideNav} setOpen={setOpenSideNav} />
-      <MainContainer />
+      <Switch>
+        <Route path='/about' component={AboutMe} />
+        <Route path='/portfolio' component={Portfolio} />
+        <Route path='/' component={MainContainer} />
+      </Switch>
     </StyledMain>
   );
 }
