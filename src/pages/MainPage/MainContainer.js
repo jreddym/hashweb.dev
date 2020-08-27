@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import me from '../../assets/svg/me.svg';
 
-const StyledMain = styled.section`
+const StyledMain = styled(motion.section)`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -54,9 +54,30 @@ const headerVariant = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 2,
-      duration: 1,
       when: 'beforeChildren',
+    },
+  },
+  exit: {
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
+};
+
+const mainTitle = {
+  initial: {
+    y: '100vh',
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 1,
+      type: 'string',
+      stiffness: 80,
     },
   },
 };
@@ -93,11 +114,17 @@ const avatarMain = {
   },
 };
 
+// const container = {
+//   initial: {
+//     x: 0,
+//   },
+// };
+
 const MainContainer = props => {
   return (
-    <StyledMain>
+    <StyledMain variants={headerVariant} initial='initial' animate='animate' exit='exit'>
       <motion.div drag dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}>
-        <motion.h1 variants={headerVariant} initial='initial' animate='animate'>
+        <motion.h1 variants={mainTitle}>
           <span>H</span>
           <span>i</span>,
           <br /> I'm{' '}
@@ -112,7 +139,7 @@ const MainContainer = props => {
           Front End Developer / Back End Developer / Freelancer
         </motion.p>
       </motion.div>
-      <motion.div variants={avatarMain} initial='initial' animate='animate'>
+      <motion.div variants={avatarMain}>
         <img src={me} alt='Jagadeesh_Avatar' />
       </motion.div>
     </StyledMain>

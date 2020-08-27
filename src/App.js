@@ -5,7 +5,8 @@ import NavigationBar from './common/NavigationBar/NavigationBar';
 import SideNavBar from './common/SideNavBar/SideNavBar';
 import AboutMe from './pages/AboutMePage/AboutMeComponent';
 import Portfolio from './pages/PortfolioPage/PortfolioComponent';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 const StyledMain = styled.div`
   width: 100%;
@@ -17,16 +18,25 @@ const StyledMain = styled.div`
 // background-image: linear-gradient(to bottom, #b5b5b5, #8a8a91, #5f626e, #343e4d, #051d2e);
 
 function App() {
+  const location = useLocation();
   const [openSideNav, setOpenSideNav] = useState(false);
   return (
     <StyledMain>
       <NavigationBar open={openSideNav} setOpen={setOpenSideNav} />
       <SideNavBar open={openSideNav} setOpen={setOpenSideNav} />
-      <Switch>
-        <Route path='/about' component={AboutMe} />
-        <Route path='/portfolio' component={Portfolio} />
-        <Route path='/' component={MainContainer} />
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route path='/about'>
+            <AboutMe />
+          </Route>
+          <Route path='/portfolio'>
+            <Portfolio />
+          </Route>
+          <Route path='/' exact>
+            <MainContainer />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </StyledMain>
   );
 }

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import portfolio_1 from '../../assets/images/portfolio_1.png';
 import portfolio_2 from '../../assets/images/portfolio_2.png';
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   margin: 1.5rem auto 0 auto;
   text-align: center;
   overflow: hidden;
@@ -64,6 +64,7 @@ const Card = styled.div`
 
   img {
     width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
   @media (max-width: 520px) {
@@ -120,6 +121,12 @@ const sectionVariant = {
       stiffness: 110,
     },
   },
+  exit: {
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
 };
 
 const footerVariant = {
@@ -153,8 +160,8 @@ const overlay = {
 
 const PortfolioComponent = () => {
   return (
-    <Container>
-      <motion.div variants={sectionVariant} initial='initial' animate='animate'>
+    <Container variants={sectionVariant} initial='initial' animate='animate' exit='exit'>
+      <motion.div>
         <h1>Portfolio</h1>
         <CardContainer>
           <Card>

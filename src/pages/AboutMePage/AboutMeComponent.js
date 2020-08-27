@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import me from '../../assets/svg/only_me.svg';
 import hi from '../../assets/svg/Hi.svg';
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   padding-bottom: 2rem;
 `;
 
@@ -54,6 +54,12 @@ const sectionVariant = {
       stiffness: 110,
     },
   },
+  exit: {
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
 };
 
 const Avatar_ME = {
@@ -86,8 +92,8 @@ const Avatar_Hi = {
 
 const AboutMeComponent = () => {
   return (
-    <Container>
-      <Section variants={sectionVariant} initial='initial' animate='animate'>
+    <Container variants={sectionVariant} initial='initial' animate='animate' exit='exit'>
+      <Section>
         <p>
           I'm a Full Stack Web Developer with 3 Years of experience, I enjoy building everything
           from small business to rich interactive web apps. If your business seeking a web presence
