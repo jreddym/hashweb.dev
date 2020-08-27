@@ -22,12 +22,16 @@ const StyledNav = styled.nav.attrs({ activeClass })`
   a:link,
   a:visited {
     text-decoration: none;
-    color: #000;
+    border-bottom: 2px solid transparent;
+    color: #fff;
+    transition: all 0.3s ease-in;
   }
 
   a:hover,
   a.${activeClass} {
     color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
   }
 
   @media (max-width: 850px) {

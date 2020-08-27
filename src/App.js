@@ -10,8 +10,11 @@ import { Route, Switch } from 'react-router-dom';
 const StyledMain = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #b5b5b5, #8a8a91, #5f626e, #343e4d, #051d2e);
+  background-color: #24292e;
+  overflow: hidden;
 `;
+
+// background-image: linear-gradient(to bottom, #b5b5b5, #8a8a91, #5f626e, #343e4d, #051d2e);
 
 function App() {
   const [openSideNav, setOpenSideNav] = useState(false);

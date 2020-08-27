@@ -49,7 +49,7 @@ const sectionVariant = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 2,
       type: 'spring',
       stiffness: 110,
     },
@@ -65,7 +65,7 @@ const Avatar_ME = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 3,
+      delay: 2.5,
       ease: 'linear',
     },
   },
@@ -78,7 +78,7 @@ const Avatar_Hi = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 3.5,
+      delay: 3,
       duration: 1,
     },
   },

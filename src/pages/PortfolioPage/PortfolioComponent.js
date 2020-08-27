@@ -5,10 +5,10 @@ import portfolio_1 from '../../assets/images/portfolio_1.png';
 import portfolio_2 from '../../assets/images/portfolio_2.png';
 
 const Container = styled.section`
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0 auto;
   text-align: center;
   overflow: hidden;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
