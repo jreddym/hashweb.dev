@@ -16,14 +16,6 @@ const StyledMain = styled(motion.section)`
     margin-top: 5rem;
     font-size: 3rem;
     margin-bottom: 1rem;
-
-    span {
-      transition: all 0.2s linear;
-    }
-
-    span:hover {
-      color: #051d2e;
-    }
   }
   p {
     color: #f0f0f0;
@@ -114,26 +106,16 @@ const avatarMain = {
   },
 };
 
-// const container = {
-//   initial: {
-//     x: 0,
-//   },
-// };
-
 const MainContainer = props => {
   return (
     <StyledMain variants={headerVariant} initial='initial' animate='animate' exit='exit'>
       <motion.div drag dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}>
         <motion.h1 variants={mainTitle}>
-          <span>H</span>
-          <span>i</span>,
-          <br /> I'm{' '}
-          <span>
-            <big>Jagadeesh</big>
-          </span>
+          Hi,
+          <br /> I'm <big>Jagadeesh</big>
           ,
           <br />
-          Full Stack Web <span>Developer</span>
+          Full Stack Web Developer
         </motion.h1>
         <motion.p variants={subTitle} initial='initial' animate='animate'>
           Front End Developer / Back End Developer / Freelancer

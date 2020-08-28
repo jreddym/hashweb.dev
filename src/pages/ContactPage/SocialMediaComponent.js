@@ -20,9 +20,13 @@ const Icon = styled.div`
 `;
 
 const Ball1 = {
+  initial: {
+    opacity: 1,
+  },
   animate: {
     x: [-1000, 0, 1057, 800, -458, 0],
     y: [-200, -300, -100, 350, 250, 0],
+    opacity: 0,
     transition: {
       x: {
         delay: 1,
@@ -33,16 +37,23 @@ const Ball1 = {
         delay: 1,
         duration: 2,
         ease: 'linear',
+      },
+      opacity: {
+        delay: 2.9,
+        ease: 'easeInOut',
       },
     },
   },
 };
 
 const Ball2 = {
+  initial: {
+    opacity: 1,
+  },
   animate: {
     x: [1200, -591, 829, 10, -591, -120, 0],
     y: [200, 300, -100, -358, -50, 350, 0],
-
+    opacity: 0,
     transition: {
       x: {
         delay: 1.5,
@@ -53,15 +64,23 @@ const Ball2 = {
         delay: 1.5,
         duration: 3.2,
         ease: 'linear',
+      },
+      opacity: {
+        delay: 4.6,
+        ease: 'easeInOut',
       },
     },
   },
 };
 
 const Ball3 = {
+  initial: {
+    opacity: 1,
+  },
   animate: {
     x: [-500, -300, -230, 300, 350, 430, 500, 650, 810, 430, 0],
     y: [1200, -359, -180, -359, -297, -359, -297, -359, -100, 350, 0],
+    opacity: 0,
     transition: {
       x: {
         delay: 2,
@@ -72,15 +91,23 @@ const Ball3 = {
         delay: 2,
         duration: 3.5,
         ease: 'linear',
+      },
+      opacity: {
+        delay: 5.4,
+        ease: 'easeInOut',
       },
     },
   },
 };
 
 const Ball4 = {
+  initial: {
+    opacity: 1,
+  },
   animate: {
     x: [630, 500, 0],
     y: [-500, 350, 0],
+    opacity: 0,
     transition: {
       x: {
         delay: 1.5,
@@ -91,6 +118,10 @@ const Ball4 = {
         delay: 1.5,
         duration: 3.2,
         ease: 'linear',
+      },
+      opacity: {
+        delay: 4.6,
+        ease: 'easeInOut',
       },
     },
   },
@@ -152,7 +183,7 @@ const SocialMediaComponent = () => {
   return (
     <Container>
       <Icon>
-        <motion.div variants={Ball1} animate='animate'>
+        <motion.div variants={Ball1} initial='initial' animate='animate'>
           <Ball />
         </motion.div>
         <motion.i

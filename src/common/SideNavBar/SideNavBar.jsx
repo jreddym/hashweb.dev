@@ -9,7 +9,7 @@ const SideNav = styled.div`
   width: ${({ open }) => (open ? '300px' : '0')};
   top: 0;
   right: 0;
-  background-color: #f1f1f1;
+  background-color: #000;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 18px;
@@ -18,10 +18,10 @@ const SideNav = styled.div`
 
 const SideNavBar = props => {
   return (
-    <div>
+    <div onClick={() => props.setOpen(false)}>
       <Backdrop setOpen={props.setOpen} open={props.open} />
       <SideNav open={props.open}>
-        <NavItems />
+        <NavItems open={props.open} />
       </SideNav>
     </div>
   );

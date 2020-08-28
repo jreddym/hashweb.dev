@@ -56,11 +56,6 @@ const sectionVariant = {
   },
 };
 
-// <StyledForm>
-//         //   <InnerBox>
-//         //     <ContactFrom />
-//         //   </InnerBox>
-//         // </StyledForm>
 const ContactContainer = () => {
   return (
     <Section variants={sectionVariant} initial='initial' animate='animate' exit='exit'>

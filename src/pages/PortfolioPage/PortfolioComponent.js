@@ -196,8 +196,7 @@ const PortfolioComponent = () => {
         <h5>Let's talk</h5>
         <p>
           Wanna get in touch or talk about a project? <br />
-          Feel free to contact me via email at <strong>jagadeesh@hashweb.dev</strong> <br />
-          or drop a line in the form at the <strong>contact page</strong>
+          Feel free to contact me via email at <strong>jagadeesh@hashweb.dev</strong>
         </p>
       </Footer>
     </Container>

@@ -36,7 +36,14 @@ const StyledNav = styled.nav.attrs({ activeClass })`
 
   @media (max-width: 850px) {
     ul {
-      display: none;
+      display: ${({ open }) => (open ? 'flex' : 'none')};
+      flex-direction: column;
+      z-index: 101;
+      color: #000;
+    }
+    li {
+      color: #000;
+      margin: 2rem 0;
     }
   }
 `;
