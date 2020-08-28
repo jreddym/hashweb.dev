@@ -5,6 +5,7 @@ import NavigationBar from './common/NavigationBar/NavigationBar';
 import SideNavBar from './common/SideNavBar/SideNavBar';
 import AboutMe from './pages/AboutMePage/AboutMeComponent';
 import Portfolio from './pages/PortfolioPage/PortfolioComponent';
+import Contact from './pages/ContactPage/ContactContainer';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path='/portfolio'>
             <Portfolio />
+          </Route>
+          <Route path='/contact' exact>
+            <Contact />
           </Route>
           <Route path='/' exact>
             <MainContainer />

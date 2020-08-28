@@ -136,7 +136,7 @@ const footerVariant = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 2,
+      delay: 1.5,
       duration: 1,
       ease: 'easeInOut',
     },
