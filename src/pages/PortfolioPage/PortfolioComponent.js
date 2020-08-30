@@ -67,12 +67,21 @@ const Card = styled.div`
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
-  @media (max-width: 520px) {
-    margin-left: 0;
-    margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: #bdc3c7;
+      transition: color 0.2 ease;
+    }
+
+    &:hover {
+      color: #fff;
+    }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-left: 0;
     margin-bottom: 1rem;
   }
@@ -91,6 +100,19 @@ const Footer = styled(motion.div)`
   p {
     font-size: 0.8rem;
     margin-top: 0.5rem;
+  }
+  a {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: #bdc3c7;
+      transition: color 0.2 ease;
+    }
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   strong {
@@ -171,9 +193,11 @@ const PortfolioComponent = () => {
               whileHover='hover'
               whileTap='hover'
               className='cardHover'>
-              <div className='tools'>
-                <p>hashweb.dev</p>
-              </div>
+              <a href='https://hashweb.dev' target='_blank' rel='noopener noreferrer'>
+                <div className='tools'>
+                  <i className='fa fa-eye' style={{ fontSize: '40px', color: '#fff' }}></i>
+                </div>
+              </a>
             </motion.div>
             <img src={portfolio_1} alt='portfolio_1' />
           </Card>
@@ -196,7 +220,10 @@ const PortfolioComponent = () => {
         <h5>Let's talk</h5>
         <p>
           Wanna get in touch or talk about a project? <br />
-          Feel free to contact me via email at <strong>jagadeesh@hashweb.dev</strong>
+          Feel free to contact me via email at{' '}
+          <a href='mailto: jagadeesh@hashweb.dev'>
+            <strong>jagadeesh@hashweb.dev</strong>
+          </a>
         </p>
       </Footer>
     </Container>

@@ -8,6 +8,10 @@ const Container = styled.div`
   display: flex;
   margin-top: 4rem;
   justify-content: space-around;
+
+  @media (max-width: 800px) {
+    justify-content: start;
+  }
 `;
 
 const Icon = styled.div`
@@ -16,6 +20,22 @@ const Icon = styled.div`
     position: absolute;
     top: -5px;
     left: -5px;
+  }
+
+  div {
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 800px) {
+    position: static;
+    margin: 2rem;
+    i {
+      position: static;
+      top: 0;
+      left: 0;
+    }
   }
 `;
 
@@ -186,45 +206,56 @@ const SocialMediaComponent = () => {
         <motion.div variants={Ball1} initial='initial' animate='animate'>
           <Ball />
         </motion.div>
-        <motion.i
-          variants={facebook}
-          initial='initial'
-          animate='animate'
-          className='fa fa-facebook-official'
-          style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        <a
+          href='https://www.facebook.com/jagadeeswarareddym/'
+          target='_blank'
+          rel='noopener noreferrer'>
+          <motion.i
+            variants={facebook}
+            initial='initial'
+            animate='animate'
+            className='fa fa-facebook-official'
+            style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        </a>
       </Icon>
       <Icon>
         <motion.div variants={Ball2} animate='animate'>
           <Ball />
         </motion.div>
-        <motion.i
-          variants={github}
-          initial='initial'
-          animate='animate'
-          className='fa fa-github'
-          style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        <a href='https://github.com/jreddym' target='_blank' rel='noopener noreferrer'>
+          <motion.i
+            variants={github}
+            initial='initial'
+            animate='animate'
+            className='fa fa-github'
+            style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        </a>
       </Icon>
       <Icon>
         <motion.div variants={Ball3} animate='animate'>
           <Ball />
         </motion.div>
-        <motion.i
-          variants={linkedIn}
-          initial='initial'
-          animate='animate'
-          className='	fa fa-linkedin-square'
-          style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        <a href='https://www.linkedin.com/in/jreddym/' target='_blank' rel='noopener noreferrer'>
+          <motion.i
+            variants={linkedIn}
+            initial='initial'
+            animate='animate'
+            className='	fa fa-linkedin-square'
+            style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        </a>
       </Icon>
       <Icon>
         <motion.div variants={Ball4} animate='animate'>
           <Ball />
         </motion.div>
-        <motion.i
-          variants={twitter}
-          initial='initial'
-          animate='animate'
-          className='fa fa-twitter'
-          style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        <a href='https://twitter.com/jreddym24' target='_blank' rel='noopener noreferrer'>
+          <motion.i
+            variants={twitter}
+            initial='initial'
+            animate='animate'
+            className='fa fa-twitter'
+            style={{ fontSize: '32px', color: '#fff' }}></motion.i>
+        </a>
       </Icon>
     </Container>
   );

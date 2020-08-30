@@ -18,21 +18,25 @@ const Section = styled(motion.section)`
     line-height: 1.6;
     letter-spacing: 1px;
   }
+
+  a {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: #ecf0f1;
+      transition: color 0.2 ease;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  @media (max-width: 800px) {
+    display: block;
+    margin: 1rem 0.8rem 0 0.8rem;
+  }
 `;
-
-// const StyledForm = styled.div`
-//   margin: 3rem auto 0 auto;
-//   padding: 3rem 0 2rem 0;
-//   width: 400px;
-//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-//   background: rgba(0, 0, 0, 0.3);
-//   border-radius: 5px;
-// `;
-
-// const InnerBox = styled.div`
-//   display: flex;
-//   justify-content: center;
-// `;
 
 const sectionVariant = {
   initial: {
@@ -63,8 +67,11 @@ const ContactContainer = () => {
         <h1>Get in touch</h1>
         <p>
           If you wanna get in touch, talk to me about a project collaboration or just say hi, <br />
-          send an email to <strong>jagadeesh@hashweb.dev</strong> or connect with me on{' '}
-          <strong>social network</strong>
+          send an email to{' '}
+          <a href='mailto: jagadeesh@hashweb.dev'>
+            <strong>jagadeesh@hashweb.dev</strong>
+          </a>{' '}
+          or connect with me on <strong>social network</strong>
         </p>
         <SocialMedia />
       </div>

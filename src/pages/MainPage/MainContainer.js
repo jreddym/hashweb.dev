@@ -12,7 +12,6 @@ const StyledMain = styled(motion.section)`
   height: 100%;
   color: #fff;
   h1 {
-    cursor: pointer;
     margin-top: 5rem;
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -31,10 +30,10 @@ const StyledMain = styled(motion.section)`
   @media (max-width: 400px) {
     h1 {
       font-size: 1.8rem;
-      margin: 0 3rem;
+      margin: 0 2rem;
     }
     p {
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
   }
 `;

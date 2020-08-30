@@ -3,21 +3,39 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import me from '../../assets/svg/only_me.svg';
 import hi from '../../assets/svg/Hi.svg';
+import { Link } from 'react-router-dom';
 
 const Container = styled(motion.section)`
   padding-bottom: 2rem;
+  @media (max-width: 800px) {
+    padding: 0;
+  }
 `;
 
 const Section = styled(motion.div)`
   text-align: center;
   width: 50%;
-  margin: 0 auto;
-  margin-top: 5rem;
+  margin: 5rem auto 0 auto;
 
   p {
     font-size: 1.5rem;
     line-height: 1.5;
     color: #fff;
+  }
+
+  a:link,
+  a:visited {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  @media (max-width: 800px) {
+    width: 90%;
+    p {
+      font-size: 1.4rem;
+    }
   }
 `;
 
@@ -71,7 +89,7 @@ const Avatar_ME = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 2.5,
+      delay: 2.2,
       ease: 'linear',
     },
   },
@@ -84,7 +102,7 @@ const Avatar_Hi = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 3,
+      delay: 2.5,
       duration: 1,
     },
   },
@@ -97,7 +115,8 @@ const AboutMeComponent = () => {
         <p>
           I'm a Full Stack Web Developer with 3 Years of experience, I enjoy building everything
           from small business to rich interactive web apps. If your business seeking a web presence
-          or an employer looking to hire, you can get in touch with me here.
+          or an employer looking to hire, you can get in touch with me{' '}
+          <Link to='/contact'>here</Link>.
         </p>
         <p>
           I have a diverse set of skills, ranging from Design, to HTML+CSS+JavaScript, React Js,
