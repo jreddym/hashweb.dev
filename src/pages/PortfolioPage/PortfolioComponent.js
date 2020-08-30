@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import portfolio_1 from '../../assets/images/portfolio_1.png';
 import portfolio_2 from '../../assets/images/portfolio_2.png';
+import { Link } from 'react-router-dom';
+import Arrows from '../../common/Arrows/Arrows';
 
 const Container = styled(motion.section)`
   margin: 1.5rem auto 0 auto;
@@ -90,7 +92,7 @@ const Card = styled.div`
 const Footer = styled(motion.div)`
   color: #bdc3c7;
   line-height: 1.8;
-  word-space: 1.2;
+  word-spacing: 1.2;
   letter-spacing: 1px;
   margin-top: 5rem;
   h5 {
@@ -216,6 +218,12 @@ const PortfolioComponent = () => {
           </Card>
         </CardContainer>
       </motion.div>
+      <Link to='/about'>
+        <Arrows direction='left' />
+      </Link>
+      <Link to='/contact'>
+        <Arrows direction='right' />
+      </Link>
       <Footer variants={footerVariant} initial='initial' animate='animate'>
         <h5>Let's talk</h5>
         <p>

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import me from '../../assets/svg/me.svg';
+import { Link } from 'react-router-dom';
+import Arrows from '../../common/Arrows/Arrows';
 
 const StyledMain = styled(motion.section)`
   display: flex;
@@ -123,6 +125,9 @@ const MainContainer = props => {
       <motion.div variants={avatarMain}>
         <img src={me} alt='Jagadeesh_Avatar' />
       </motion.div>
+      <Link to='/about'>
+        <Arrows direction='right' />
+      </Link>
     </StyledMain>
   );
 };

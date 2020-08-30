@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import me from '../../assets/svg/only_me.svg';
 import hi from '../../assets/svg/Hi.svg';
 import { Link } from 'react-router-dom';
+import Arrows from '../../common/Arrows/Arrows';
 
 const Container = styled(motion.section)`
   padding-bottom: 2rem;
@@ -129,6 +130,12 @@ const AboutMeComponent = () => {
       <AvatarHi variants={Avatar_Hi} initial='initial' animate='animate'>
         <img src={hi} alt='Hi_Avatar' />
       </AvatarHi>
+      <Link to='/'>
+        <Arrows direction='left' />
+      </Link>
+      <Link to='/portfolio'>
+        <Arrows direction='right' />
+      </Link>
     </Container>
   );
 };

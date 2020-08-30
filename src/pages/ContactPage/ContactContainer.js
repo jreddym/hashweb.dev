@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import SocialMedia from './SocialMediaComponent';
+import { Link } from 'react-router-dom';
+import Arrows from '../../common/Arrows/Arrows';
 
 const Section = styled(motion.section)`
   color: #ecf0f1;
@@ -74,6 +76,9 @@ const ContactContainer = () => {
           or connect with me on <strong>social network</strong>
         </p>
         <SocialMedia />
+        <Link to='/portfolio'>
+          <Arrows direction='left' />
+        </Link>
       </div>
     </Section>
   );
