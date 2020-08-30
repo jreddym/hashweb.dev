@@ -24,7 +24,7 @@ const arrow = {
 
 const Container = styled.div`
   position: fixed;
-  top: 50%;
+  top: 45%;
   ${({ direction }) => direction}:5%;
 
   @media (max-width: 800px) {

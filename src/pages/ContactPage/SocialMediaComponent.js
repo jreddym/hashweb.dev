@@ -211,7 +211,7 @@ const SocialMediaComponent = () => {
           target='_blank'
           rel='noopener noreferrer'>
           <motion.i
-            variants={facebook}
+            variants={window.screen.width >= 800 ? facebook : null}
             initial='initial'
             animate='animate'
             className='fa fa-facebook-official'
@@ -224,7 +224,7 @@ const SocialMediaComponent = () => {
         </motion.div>
         <a href='https://github.com/jreddym' target='_blank' rel='noopener noreferrer'>
           <motion.i
-            variants={github}
+            variants={window.screen.width >= 800 ? github : null}
             initial='initial'
             animate='animate'
             className='fa fa-github'
@@ -237,7 +237,7 @@ const SocialMediaComponent = () => {
         </motion.div>
         <a href='https://www.linkedin.com/in/jreddym/' target='_blank' rel='noopener noreferrer'>
           <motion.i
-            variants={linkedIn}
+            variants={window.screen.width >= 800 ? linkedIn : null}
             initial='initial'
             animate='animate'
             className='	fa fa-linkedin-square'
@@ -250,7 +250,7 @@ const SocialMediaComponent = () => {
         </motion.div>
         <a href='https://twitter.com/jreddym24' target='_blank' rel='noopener noreferrer'>
           <motion.i
-            variants={twitter}
+            variants={window.screen.width >= 800 ? twitter : null}
             initial='initial'
             animate='animate'
             className='fa fa-twitter'
