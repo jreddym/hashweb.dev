@@ -83,7 +83,7 @@ const Card = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     margin-left: 0;
     margin-bottom: 1rem;
   }

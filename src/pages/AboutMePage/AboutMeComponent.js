@@ -90,7 +90,7 @@ const Avatar_ME = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 2.2,
+      delay: 2,
       ease: 'linear',
     },
   },
@@ -103,7 +103,7 @@ const Avatar_Hi = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 2.5,
+      delay: 2.2,
       duration: 1,
     },
   },
