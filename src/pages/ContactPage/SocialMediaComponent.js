@@ -1,7 +1,7 @@
-import React from 'react';
-import Ball from '../../common/Ball/Ball';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Ball from '../../common/Ball/Ball'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 const Container = styled.div`
   width: 500px;
@@ -12,7 +12,7 @@ const Container = styled.div`
   @media (max-width: 800px) {
     justify-content: start;
   }
-`;
+`
 
 const Icon = styled.div`
   position: relative;
@@ -37,7 +37,7 @@ const Icon = styled.div`
       left: 0;
     }
   }
-`;
+`
 
 const Ball1 = {
   initial: {
@@ -64,7 +64,7 @@ const Ball1 = {
       },
     },
   },
-};
+}
 
 const Ball2 = {
   initial: {
@@ -91,7 +91,7 @@ const Ball2 = {
       },
     },
   },
-};
+}
 
 const Ball3 = {
   initial: {
@@ -118,7 +118,7 @@ const Ball3 = {
       },
     },
   },
-};
+}
 
 const Ball4 = {
   initial: {
@@ -145,7 +145,7 @@ const Ball4 = {
       },
     },
   },
-};
+}
 
 const facebook = {
   initial: {
@@ -158,7 +158,7 @@ const facebook = {
       ease: 'linear',
     },
   },
-};
+}
 
 const github = {
   initial: {
@@ -171,7 +171,7 @@ const github = {
       ease: 'linear',
     },
   },
-};
+}
 
 const linkedIn = {
   initial: {
@@ -184,7 +184,7 @@ const linkedIn = {
       ease: 'linear',
     },
   },
-};
+}
 
 const twitter = {
   initial: {
@@ -197,7 +197,7 @@ const twitter = {
       ease: 'linear',
     },
   },
-};
+}
 
 const SocialMediaComponent = () => {
   return (
@@ -258,7 +258,7 @@ const SocialMediaComponent = () => {
         </a>
       </Icon>
     </Container>
-  );
-};
+  )
+}
 
-export default SocialMediaComponent;
+export default SocialMediaComponent

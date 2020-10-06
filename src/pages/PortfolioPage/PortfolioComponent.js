@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import portfolio_1 from '../../assets/images/portfolio_1.png';
-import portfolio_2 from '../../assets/images/portfolio_2.png';
-import { Link } from 'react-router-dom';
-import Arrows from '../../common/Arrows/Arrows';
+import React from 'react'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import portfolio_1 from '../../assets/images/portfolio_1.png'
+import portfolio_2 from '../../assets/images/portfolio_2.png'
+import { Link } from 'react-router-dom'
+import Arrows from '../../common/Arrows/Arrows'
 
 const Container = styled(motion.section)`
   margin: 1.5rem auto 0 auto;
@@ -23,13 +23,13 @@ const Container = styled(motion.section)`
       margin-top: 0;
     }
   }
-`;
+`
 
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-`;
+`
 
 const Card = styled.div`
   height: 250px;
@@ -87,7 +87,7 @@ const Card = styled.div`
     margin-left: 0;
     margin-bottom: 1rem;
   }
-`;
+`
 
 const Footer = styled(motion.div)`
   color: #bdc3c7;
@@ -129,7 +129,7 @@ const Footer = styled(motion.div)`
       font-size: 0.6rem;
     }
   }
-`;
+`
 
 const sectionVariant = {
   initial: {
@@ -151,7 +151,7 @@ const sectionVariant = {
       ease: 'easeInOut',
     },
   },
-};
+}
 
 const footerVariant = {
   initial: {
@@ -165,7 +165,7 @@ const footerVariant = {
       ease: 'easeInOut',
     },
   },
-};
+}
 
 const overlay = {
   initial: {
@@ -180,7 +180,7 @@ const overlay = {
       duration: 0.5,
     },
   },
-};
+}
 
 const PortfolioComponent = () => {
   return (
@@ -195,9 +195,12 @@ const PortfolioComponent = () => {
               whileHover='hover'
               whileTap='hover'
               className='cardHover'>
-              <a href='https://hashweb.dev' target='_blank' rel='noopener noreferrer'>
+              <a
+                href='https://github.com/jreddym/hashweb.dev'
+                target='_blank'
+                rel='noopener noreferrer'>
                 <div className='tools'>
-                  <i className='fa fa-eye' style={{ fontSize: '40px', color: '#fff' }}></i>
+                  <i className='fa fa-github' style={{ fontSize: '40px', color: '#fff' }}></i>
                 </div>
               </a>
             </motion.div>
@@ -210,9 +213,14 @@ const PortfolioComponent = () => {
               whileHover='hover'
               whileTap='hover'
               className='cardHover'>
-              <div className='tools'>
-                <p>In Development</p>
-              </div>
+              <a
+                href='https://karate-school-hashweb.herokuapp.com/'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <div className='tools'>
+                  <i className='fa fa-eye' style={{ fontSize: '40px', color: '#fff' }}></i>
+                </div>
+              </a>
             </motion.div>
             <img src={portfolio_2} alt='portfolio_2' />
           </Card>
@@ -235,7 +243,7 @@ const PortfolioComponent = () => {
         </p>
       </Footer>
     </Container>
-  );
-};
+  )
+}
 
-export default PortfolioComponent;
+export default PortfolioComponent
